@@ -6,7 +6,7 @@ import numpy as np
 
 win = tk.Tk()
 win.attributes('-fullscreen', True)
-win.title('送给园园小朋友的七夕礼物')
+# win.title('送给园园小朋友的七夕礼物')
 screenwidth = win.winfo_screenwidth()
 screenheight = win.winfo_screenheight()
 win.geometry("{0}x{1}+0+0".format(int(screenwidth), int(screenheight)))
@@ -17,23 +17,23 @@ t.speed(2)
 x_ratio = win.winfo_screenwidth()/1920
 y_ratio = win.winfo_screenheight()/1080
 
+#
+# def writeT(mystr, the_turtle, fontsize=60):
+#     the_turtle.penup()
+#     the_turtle.write(mystr, font=('隶书', fontsize, 'normal'), move=True)
+#     the_turtle.penup()
 
-def writeT(mystr, the_turtle, fontsize=60):
-    the_turtle.penup()
-    the_turtle.write(mystr, font=('隶书', fontsize, 'normal'), move=True)
-    the_turtle.penup()
-
-
-def stamp(the_turtle):
-    the_turtle.pensize(2)
-    the_turtle.pencolor('red')
-    the_turtle.pendown()
-    for i in range(4):
-        the_turtle.forward(56*y_ratio)
-        the_turtle.left(90)
-    the_turtle.end_fill()
-    the_turtle.write('親方\n啟園', font=('隶书', int(20*y_ratio), 'normal'))
-    the_turtle.penup()
+#
+# def stamp(the_turtle):
+#     the_turtle.pensize(2)
+#     the_turtle.pencolor('red')
+#     the_turtle.pendown()
+#     for i in range(4):
+#         the_turtle.forward(56*y_ratio)
+#         the_turtle.left(90)
+#     the_turtle.end_fill()
+#     the_turtle.write('親方\n啟園', font=('隶书', int(20*y_ratio), 'normal'))
+#     the_turtle.penup()
 
 
 def analyze(depth=10, el_angle=2.8, az_angle=4.):
@@ -60,68 +60,68 @@ def analyze(depth=10, el_angle=2.8, az_angle=4.):
     return im
 
 
-def write_poet(the_turtle):
-    the_turtle.penup()
-    the_turtle.goto(600*x_ratio, 400*y_ratio)
-    writeT('月', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, 320*y_ratio)
-    writeT('出', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, 240*y_ratio)
-    writeT('皎', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, 160*y_ratio)
-    writeT('兮', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, 0*y_ratio)
-    writeT('佼', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, -80*y_ratio)
-    writeT('人', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, -160*y_ratio)
-    writeT('僚', the_turtle, int(60*y_ratio))
-    the_turtle.goto(600*x_ratio, -240*y_ratio)
-    writeT('兮', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, 400*y_ratio)
-    writeT('舒', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, 320*y_ratio)
-    writeT('窈', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, 240*y_ratio)
-    writeT('纠', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, 160*y_ratio)
-    writeT('兮', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, 0*y_ratio)
-    writeT('劳', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, -80*y_ratio)
-    writeT('心', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, -160*y_ratio)
-    writeT('悄', the_turtle, int(60*y_ratio))
-    the_turtle.goto(500*x_ratio, -240*y_ratio)
-    writeT('兮', the_turtle, int(60*y_ratio))
-
-
-def write_blessing(the_turtle):
-    writeT('小', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-400*x_ratio, -80*y_ratio)
-    writeT('园', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-400*x_ratio, -160*y_ratio)
-    writeT('同', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-400*x_ratio, -240*y_ratio)
-    writeT('学', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-500*x_ratio, -80*y_ratio)
-    writeT('七', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-500*x_ratio, -160*y_ratio)
-    writeT('夕', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-500*x_ratio, -240*y_ratio)
-    writeT('快', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-500*x_ratio, -320*y_ratio)
-    writeT('乐', the_turtle, int(60*y_ratio))
-    the_turtle.goto(-492*x_ratio, -400*y_ratio)
-    stamp(the_turtle)
-    the_turtle.hideturtle()
-
-
-def circle_around():
-    t.speed(1)
-    for i in range(4):
-        t.left(90)
-    t.speed(9999999)
+# def write_poet(the_turtle):
+#     the_turtle.penup()
+#     the_turtle.goto(600*x_ratio, 400*y_ratio)
+#     writeT('月', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, 320*y_ratio)
+#     writeT('出', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, 240*y_ratio)
+#     writeT('皎', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, 160*y_ratio)
+#     writeT('兮', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, 0*y_ratio)
+#     writeT('佼', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, -80*y_ratio)
+#     writeT('人', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, -160*y_ratio)
+#     writeT('僚', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(600*x_ratio, -240*y_ratio)
+#     writeT('兮', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, 400*y_ratio)
+#     writeT('舒', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, 320*y_ratio)
+#     writeT('窈', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, 240*y_ratio)
+#     writeT('纠', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, 160*y_ratio)
+#     writeT('兮', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, 0*y_ratio)
+#     writeT('劳', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, -80*y_ratio)
+#     writeT('心', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, -160*y_ratio)
+#     writeT('悄', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(500*x_ratio, -240*y_ratio)
+#     writeT('兮', the_turtle, int(60*y_ratio))
+#
+#
+# def write_blessing(the_turtle):
+#     writeT('小', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-400*x_ratio, -80*y_ratio)
+#     writeT('园', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-400*x_ratio, -160*y_ratio)
+#     writeT('同', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-400*x_ratio, -240*y_ratio)
+#     writeT('学', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-500*x_ratio, -80*y_ratio)
+#     writeT('七', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-500*x_ratio, -160*y_ratio)
+#     writeT('夕', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-500*x_ratio, -240*y_ratio)
+#     writeT('快', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-500*x_ratio, -320*y_ratio)
+#     writeT('乐', the_turtle, int(60*y_ratio))
+#     the_turtle.goto(-492*x_ratio, -400*y_ratio)
+#     stamp(the_turtle)
+#     the_turtle.hideturtle()
+#
+#
+# def circle_around():
+#     t.speed(1)
+#     for i in range(4):
+#         t.left(90)
+#     t.speed(9999999)
 
 
 def exit_prog():
@@ -137,25 +137,25 @@ def interact_message():
 
 
 def main(root):
-    write_poet(t)
+    # write_poet(t)
     im = analyze()
-    circle_around()
+    # circle_around()
     t.clear()
     canvas.create_image((0, 0), image=im)
     t.penup()
     t.speed(999999)
     t.goto(600*x_ratio, -240*y_ratio)
-    writeT('月\n出\n皎\n兮\n\n佼\n人\n僚\n兮', t, int(60*y_ratio))
-    t.goto(500*x_ratio, -240*y_ratio)
-    writeT('舒\n窈\n纠\n兮\n\n劳\n心\n悄\n兮', t, int(60*y_ratio))
-    t.speed(2)
+    # writeT('月\n出\n皎\n兮\n\n佼\n人\n僚\n兮', t, int(60*y_ratio))
+    # t.goto(500*x_ratio, -240*y_ratio)
+    # writeT('舒\n窈\n纠\n兮\n\n劳\n心\n悄\n兮', t, int(60*y_ratio))
+    # t.speed(2)
     t.goto(-400*x_ratio, 0)
     t.speed(1)
-    write_blessing(t)
+    # write_blessing(t)
     new_canvas = tk.Canvas(master=canvas, width=100, height=100)
     canvas.create_window(600*x_ratio, 400*y_ratio, window=new_canvas)
-    interact_btn = tk.Button(master=new_canvas, text='谢谢作者', command=interact_message)
-    interact_btn.pack()
+    # interact_btn = tk.Button(master=new_canvas, text='谢谢作者', command=interact_message)
+    # interact_btn.pack()
     exit_btn = tk.Button(master=new_canvas, text='退出', command=exit_prog)
     exit_btn.pack()
 
